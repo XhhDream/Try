@@ -17,8 +17,7 @@ function init() {
 		items[i].addEventListener('mouseover',function(){
 			clearInterval(delTime);
 			flag=this.index;
-			rec(this.index);
-			reImg();
+			res(this.index);
 		});
 	}
 	prev.addEventListener('click',function(){
@@ -27,8 +26,7 @@ function init() {
 		}else{
 			flag--;
 		}
-		rec(flag);
-		reImg();
+		res(flag);
 	}),
 	next.addEventListener('click',function(){
 		if (flag>=len-1) {
@@ -36,8 +34,7 @@ function init() {
 		}else{
 			flag++;
 		}
-		rec(flag);
-		reImg();
+		res(flag);
 	});
 	star();
 }
@@ -50,17 +47,15 @@ function star(){
 		}else{
 			flag++;
 		}
-		rec(flag);
-		reImg();
+		res(flag);
 	},4000);
 }
 
-function rec(index){
+function res(index){
 	for (var i = 0; i < len; i++) {
 		items[i].className="item";
 	}
 	items[index].className+=" active";
-}
-function reImg(){
+	/*此处可添加切换动画*/
 	slider.style.top=-flag*h+"px";
 }
