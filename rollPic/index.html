@@ -15,7 +15,7 @@
 			margin: 100px auto;
 			height: 454px;
 			width: 730px;
-			/*overflow: hidden;*/
+			overflow: hidden;
 			position: relative;
 		}
 		#wrap ul{
@@ -40,6 +40,12 @@
 		#wrap .active{
 			background-color: #b61b1f;
 		}
+		#slider a{
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			float: left;
+		}
 		.prev,.next{
 			height: 62px;
 			width: 28px;
@@ -51,6 +57,7 @@
 			opacity: .2;
 			position: absolute;
 			cursor: pointer;
+			user-select:none;
 		}
 		.prev{
 			left: 0;
